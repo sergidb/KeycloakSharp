@@ -3,8 +3,6 @@
 # KeycloakSharp
 This project aims to be a guide into how to integrate Keycloak user management into your .NET API project.
 
-# Keycloak integration into .NET 6 WebApi:
-
 ## 1. Key concepts
 - **Controller:**  
 A Controller is a component in your application that handles incoming requests, processes them, and returns an appropriate response. It acts as an intermediary between the user interface and the application's business logic.  
