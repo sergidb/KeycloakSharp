@@ -1,3 +1,7 @@
+**🚧 Project in development.**
+---
+# KeycloakSharp
+This project aims to be a guide into how to integrate Keycloak user management into your .NET API project.
 
 # Keycloak integration into .NET 6 WebApi:
 
