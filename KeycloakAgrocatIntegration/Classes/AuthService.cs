@@ -13,13 +13,13 @@ namespace KeycloakIntegration
 
         public AuthResponse Login(LoginRequest request)
         {
-            try { return Auth(request); }
+            try { return Auth(request.ToAuthRequest()); }
             catch (AuthException ex) { throw ex; }
         }
 
         public AuthResponse Refresh(RefreshRequest request)
         {
-            try { return Auth(request); }
+            try { return Auth(request.ToAuthRequest()); }
             catch (AuthException ex) { throw ex; }
         }
 
