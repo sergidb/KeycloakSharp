@@ -1,4 +1,4 @@
-﻿using KeycloakIntegration;
+﻿using KeycloakSharp;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 

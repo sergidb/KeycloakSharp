@@ -1,7 +1,7 @@
-﻿using KeycloakIntegration.Classes;
+﻿using KeycloakSharp.Classes;
 using RestSharp;
 
-namespace KeycloakIntegration
+namespace KeycloakSharp
 {
 	public class AuthService
 	{

@@ -19,7 +19,7 @@ Authorization is the process of determining whether an authenticated user or sys
 
 ## 2. Project Configuration
 
-1. Add the KeycloakIntegration DLL to your WebApi project.
+1. Add the KeycloakSharp DLL to your WebApi project.
 1. Install the [Microsoft.AspNetCore.Authentication.JwtBearer](https://www.nuget.org/packages/Microsoft.AspNetCore.Authentication.JwtBearer/) NuGet package.
 
 1. Add Keycloak configuration to appsettings.json
@@ -38,8 +38,8 @@ Authorization is the process of determining whether an authenticated user or sys
 1. Create the AuthController with the following content:
     - Replace `<namespace>` for the namespace of your project.
     ```csharp
-     using KeycloakIntegration;
-     using KeycloakIntegration.Classes;
+     using KeycloakSharp;
+     using KeycloakSharp.Classes;
      using Microsoft.AspNetCore.Mvc;
      
      namespace <namespace>

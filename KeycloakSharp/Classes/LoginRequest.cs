@@ -1,4 +1,4 @@
-﻿namespace KeycloakIntegration.Classes
+﻿namespace KeycloakSharp.Classes
 {
 	public class LoginRequest
 	{

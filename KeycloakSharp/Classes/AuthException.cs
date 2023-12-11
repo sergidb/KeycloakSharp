@@ -1,5 +1,5 @@
 ﻿using System;
-namespace KeycloakIntegration
+namespace KeycloakSharp
 {
 	public class AuthException : Exception
 	{

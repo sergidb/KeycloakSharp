@@ -1,5 +1,5 @@
-﻿using KeycloakIntegration;
-using KeycloakIntegration.Classes;
+﻿using KeycloakSharp;
+using KeycloakSharp.Classes;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KeycloakTester.Controllers
