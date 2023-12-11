@@ -13,7 +13,7 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KeycloakAgrocatIntegration\KeycloakAgrocatIntegration.csproj">
+    <ProjectReference Include="..\KeycloakSharp\KeycloakSharp.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
