@@ -1,18 +1,19 @@
-﻿using System;
-namespace KeycloakIntegration.Classes
+﻿namespace KeycloakIntegration.Classes
 {
-	public class RefreshRequest : AuthRequest
+	public class RefreshRequest
 	{
 
-		public new string? RefreshToken
-		{
-			get => base.RefreshToken;
-			set => base.RefreshToken = value;
-		}
+		public string? RefreshToken { get; set; }
 
-		public RefreshRequest()
+		public RefreshRequest() { }
+
+		public AuthRequest ToAuthRequest()
 		{
-			GrantType = "refresh_token";
+			return new AuthRequest()
+			{
+				GrantType = "refresh_token",
+				RefreshToken = this.RefreshToken
+			};
 		}
 
 	}

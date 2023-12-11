@@ -1,23 +1,21 @@
-﻿using System;
-namespace KeycloakIntegration.Classes
+﻿namespace KeycloakIntegration.Classes
 {
-	public class LoginRequest : AuthRequest
+	public class LoginRequest
 	{
 
-		public new string? Username {
-			get => base.Username;
-			set => base.Username = value;
-		}
+		public string? Username { get; set; }
+		public string? Password { get; set; }
 
-		public new string? Password
-		{
-			get => base.Password;
-			set => base.Password = value;
-		}
+		public LoginRequest() { }
 
-		public LoginRequest()
+		public AuthRequest ToAuthRequest()
 		{
-			GrantType = "password";
+			return new AuthRequest()
+			{
+				Username = this.Username,
+				Password = Password,
+				GrantType = "password"
+			};
 		}
 
 	}
