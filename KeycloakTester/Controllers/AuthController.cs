@@ -42,14 +42,14 @@ namespace KeycloakTester.Controllers
 
         }
 
-        [HttpPost("")]
+        [HttpPost("login")]
         public IActionResult Login(LoginRequest request)
         {
             try { return Ok(auth.Login(request)); }
             catch(Exception) { throw; }
         }
 
-        [HttpPost("")]
+        [HttpPost("refresh")]
         public IActionResult Refresh(RefreshRequest request)
         {
             try { return Ok(auth.Refresh(request)); }
