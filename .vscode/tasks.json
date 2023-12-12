@@ -1,0 +1,58 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "inputs": [
+        {
+            "id": "version_number",
+            "description": "Version Number:",
+            "default": "1.0.0",
+            "type": "promptString"
+        },
+    ],
+    "tasks": [
+
+        // Run the dotnet project
+        {
+            "label": "dotnet run",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "run",
+                "--project",
+                "${workspaceFolder}/KeycloakTester/KeycloakTester.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+
+        // Build the project
+        {
+            "label": "dotnet build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/KeycloakSharp/KeycloakSharp.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+
+        // Pack Nuget package
+        {
+            "label": "dotnet pack",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "pack",
+                "${workspaceFolder}/KeycloakSharp/KeycloakSharp.csproj",
+                "--output",
+                "${workspaceFolder}/KeycloakSharp/bin/Release",
+                "-c",
+                "Release",
+                "/p:Version=${input:version_number}"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+
+    ]
+}
